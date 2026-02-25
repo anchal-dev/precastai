@@ -726,9 +726,9 @@ Built with XGBoost · Monte Carlo Simulation · Streamlit
 # ═══════════════════════════════════════════════════════════════════
 st.markdown("""
 <div class="footer">
-  <div class="footer-left"><strong>PrecastAI</strong> © 2025 &nbsp;|&nbsp; v2.0</div>
+  <div class="footer-left"><strong>PrecastAI</strong> © 2026 &nbsp;|&nbsp; v2.0</div>
   <div class="footer-center">
-    Built for <strong>CreaTech Hackathon 2025</strong><br>
+    Built for <strong>CreaTech Hackathon 2026</strong><br>
     <span style="font-size:0.7rem;color:#334155">XGBoost · Monte Carlo · Streamlit · Physics-Informed ML · NSGA-II</span>
   </div>
   <div>
