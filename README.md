@@ -1,145 +1,212 @@
-🏗️ PrecastAI – Production Intelligence System
+<div align="center">
 
-PrecastAI is a machine learning–powered web application that predicts:
+<img src="https://img.shields.io/badge/PrecastAI-Production%20Intelligence-1a1a2e?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgN2wxMCA1IDEwLTV6TTIgMTdsOSA1IDktNVYybC05IDV6Ii8+PC9zdmc+" alt="PrecastAI Banner"/>
 
-⏱️ Total Cycle Time (hours)
+# 🏗️ PrecastAI — Production Intelligence System
 
-💰 Cost per Cycle (INR)
+**Machine Learning–powered predictions for precast concrete manufacturing**
 
-for precast concrete production using material mix, curing conditions, region, and automation level.
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-precastai.streamlit.app-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://precastai.streamlit.app)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![XGBoost](https://img.shields.io/badge/XGBoost-3.2.0-009688?style=for-the-badge&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3.2-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
 
-Built using XGBoost + Scikit-Learn + Streamlit and deployed on Streamlit Cloud.
+<br/>
 
-🚀 Live Demo
+> Predict **cycle time** and **production cost** for precast concrete operations using advanced ML, Monte Carlo simulation, and ROI analysis — all in an interactive web interface.
 
-🔗 https://precastai.streamlit.app
+<br/>
 
-🧠 Features
+</div>
 
-ML-powered predictions
+---
 
-Monte Carlo simulation (risk analysis)
+## 📌 Overview
 
-ROI analysis engine
+**PrecastAI** is a production-ready machine learning application that helps precast concrete manufacturers, construction planners, and production engineers make data-driven decisions. By analyzing material mix, curing conditions, regional factors, and automation level, PrecastAI delivers accurate predictions for:
 
-Smart feature engineering
+| Metric | Description |
+|---|---|
+| ⏱️ **Total Cycle Time** | Predicted production duration in hours |
+| 💰 **Cost per Cycle** | Estimated production cost in INR |
 
-Interactive UI with Plotly visualizations
+---
 
-Production-ready deployment
+## ✨ Features
 
-🏗️ Tech Stack
-Layer	Technology
-Frontend	Streamlit
-ML Models	XGBoost 3.2.0
-Preprocessing	Scikit-learn 1.3.2
-Data Handling	Pandas, NumPy
-Visualization	Plotly
-Deployment	Streamlit Cloud
-Python Version	3.11
-📂 Project Structure
+- 🤖 **ML-Powered Predictions** — XGBoost regressors trained with cross-validation for robust accuracy
+- 🎲 **Monte Carlo Simulation** — Probabilistic risk analysis across thousands of scenarios
+- 📈 **ROI Analysis Engine** — Evaluate automation and material investment trade-offs
+- 🧮 **Smart Feature Engineering** — Maturity Proxy, Cement Efficiency, Climate Stress indices
+- 📊 **Interactive Visualizations** — Dynamic Plotly charts for deep insight
+- ☁️ **Production Deployment** — Hosted on Streamlit Cloud with auto-redeploy on push
+
+---
+
+## 🚀 Live Demo
+
+> **Try it now →** [precastai.streamlit.app](https://precastai.streamlit.app)
+
+No setup required. Input your production parameters and get instant predictions with risk analysis.
+
+---
+
+## 🧠 Model Details
+
+### Prediction Targets
+- `total_cycle_time_hr` — Total hours from preparation to demoulding
+- `cost_per_cycle_inr` — Total cost per production cycle in Indian Rupees
+
+### Feature Engineering
+| Engineered Feature | Description |
+|---|---|
+| **Maturity Proxy** | Temperature × Time index simulating concrete maturity |
+| **Cement Efficiency** | Strength-to-cement-ratio optimisation metric |
+| **Climate Stress** | Environmental load factor for regional curing conditions |
+
+### Algorithm
+- **XGBRegressor** (Gradient Boosting) for both targets
+- **Cross-validation** to ensure generalizability and prevent overfitting
+- **Scikit-learn pipelines** for reproducible preprocessing
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | Streamlit |
+| **ML Models** | XGBoost 3.2.0 |
+| **Preprocessing** | Scikit-learn 1.3.2 |
+| **Data Handling** | Pandas, NumPy |
+| **Visualization** | Plotly |
+| **Deployment** | Streamlit Cloud |
+| **Python Version** | 3.11 |
+
+---
+
+## 📂 Project Structure
+
+```
 precastai/
 │
-├── app.py                  # Main Streamlit app
-├── train_models.py         # Model training script
-├── generate_data.py        # Synthetic dataset generator
-├── precast_dataset.csv     # Dataset
-├── model_cycle_time.pkl    # Trained cycle time model
-├── model_cost.pkl          # Trained cost model
-├── preprocessor.pkl        # Saved preprocessing pipeline
-├── requirements.txt        # Python dependencies
-├── runtime.txt             # Python version config
-└── README.md
-🔬 Model Details
-Targets:
+├── app.py                  # 🖥️  Main Streamlit application
+├── train_models.py         # 🧪  Model training script
+├── generate_data.py        # 🔧  Synthetic dataset generator
+│
+├── precast_dataset.csv     # 📊  Training dataset
+├── model_cycle_time.pkl    # 💾  Trained cycle time model
+├── model_cost.pkl          # 💾  Trained cost model
+├── preprocessor.pkl        # ⚙️   Saved preprocessing pipeline
+│
+├── requirements.txt        # 📦  Python dependencies
+├── runtime.txt             # 🐍  Python version config
+└── README.md               # 📖  You are here
+```
 
-total_cycle_time_hr
+---
 
-cost_per_cycle_inr
+## ⚙️ Local Setup
 
-Feature Engineering:
+### Prerequisites
+- Python 3.11
+- Conda (recommended) or pip
 
-Maturity Proxy
-
-Cement Efficiency
-
-Climate Stress
-
-Algorithms Used:
-
-XGBRegressor (Gradient Boosting)
-
-Cross-validation used to validate model robustness.
-
-⚙️ Installation (Local Setup)
-1️⃣ Clone Repository
+### 1. Clone the Repository
+```bash
 git clone https://github.com/anchal-dev/precastai.git
 cd precastai
-2️⃣ Create Virtual Environment
+```
+
+### 2. Create a Virtual Environment
+```bash
 conda create -n precast_env python=3.11
 conda activate precast_env
-3️⃣ Install Dependencies
+```
+
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
-4️⃣ Run App
+```
+
+### 4. Launch the App
+```bash
 streamlit run app.py
-🧪 Train Models (Optional)
+```
 
-If you want to retrain:
+The app will open at `http://localhost:8501` 🎉
 
+---
+
+## 🔁 Retrain Models (Optional)
+
+To regenerate models from scratch using the dataset:
+
+```bash
 python train_models.py
+```
 
-This will regenerate:
+This will recreate:
+- `model_cycle_time.pkl`
+- `model_cost.pkl`
+- `preprocessor.pkl`
 
-model_cycle_time.pkl
+---
 
-model_cost.pkl
+## 🌍 Deployment
 
-preprocessor.pkl
+PrecastAI is deployed on **Streamlit Cloud** with:
 
-🌍 Deployment
+- ✅ Python 3.11 runtime (`runtime.txt`)
+- ✅ Version-pinned dependencies (`requirements.txt`)
+- ✅ XGBoost & Scikit-learn version matching
+- ✅ **Auto-redeploy** triggered on every `git push`
 
-Deployed on Streamlit Cloud with:
+---
 
-Python 3.11
+## 📊 Use Cases
 
-Version-matched XGBoost & Scikit-learn
+PrecastAI is built for:
 
-Auto redeploy on Git push
+| User | Use Case |
+|---|---|
+| 🏭 **Precast Manufacturers** | Optimize curing cycles and reduce downtime |
+| 🏗️ **Construction Planners** | Forecast production timelines with confidence intervals |
+| 👷 **Production Engineers** | Justify automation investment with ROI analysis |
 
-📊 Use Case
+---
 
-This system helps:
+## 🔮 Roadmap
 
-Precast manufacturers
+- [ ] 📉 Feature importance dashboard (SHAP values)
+- [ ] 🔍 Model explainability layer
+- [ ] 🌐 Production REST API endpoint
+- [ ] 🗄️ Database integration for production logging
+- [ ] 🏭 Real industrial dataset support
+- [ ] 📱 Mobile-optimized interface
 
-Construction planners
+---
 
-Production engineers
+## 👩‍💻 Author
 
-to optimize:
+<div align="center">
 
-Curing cycles
+**Anchal Gupta**
+*Electronics & Communication Engineering*
+*Madan Mohan Malviya University of Technology*
 
-Material costs
+[![GitHub](https://img.shields.io/badge/GitHub-anchal--dev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/anchal-dev)
 
-Automation investment decisions
+</div>
 
-🏆 Future Improvements
+---
 
-Feature importance dashboard
+<div align="center">
 
-Model explainability (SHAP)
+*Built with ❤️ for smarter precast concrete manufacturing*
 
-Production API endpoint
+⭐ **Star this repo if you find it useful!**
 
-Database integration
-
-Real industrial dataset support
-
-👩‍💻 Author
-
-Anchal Gupta
-Electronics & Communication Engineering [IOT]
-Madan Mohan Malviya University of Technology
-
-GitHub: https://github.com/anchal-dev
+</div>
